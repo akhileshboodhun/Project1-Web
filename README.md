@@ -7,3 +7,5 @@ npm i
 ```console
 npm run start
 ```
+## Click image to open Deployed Netlify website
+> <a href="https://akhilesh-it-stock-mgnt.netlify.app/" target="_blank"><img src="https://flaviocopes.com/netlify/netlify-logo.png" width="100"/></a>
