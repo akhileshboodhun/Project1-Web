@@ -1,0 +1,193 @@
+@import url(../fontawesome6web/css/all.css);
+@font-face {
+  font-family: 'Lato-Thin';
+  src: url("../fonts/Lato/Lato-Thin.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Lato-Light';
+  src: url("../fonts/Lato/Lato-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url("../fonts/Lato/Lato-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Lato-Bold';
+  src: url("../fonts/Lato/Lato-Bold.ttf") format("truetype"); }
+
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font-family: 'Lato-Regular'; }
+
+:root {
+  --blue: rgb(76, 120, 177);
+  --grey: rgb(75, 75, 75); }
+
+body {
+  padding: 2px; }
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.grid {
+  display: grid;
+  justify-content: space-around;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 2em; }
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 2em;
+  align-items: center; }
+  nav a {
+    position: relative; }
+    nav a:after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 3px;
+      background-color: var(--grey);
+      left: 50%;
+      bottom: -5px;
+      transform: translateX(-50%) scaleX(0);
+      transform-origin: 50% 50%;
+      transition: all 0.5s ease;
+      transition-delay: 0.1s; }
+    nav a:hover:after {
+      transform: translateX(-50%) scaleX(1);
+      transition: all 0.5s ease; }
+  nav .nav-links ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly; }
+    nav .nav-links ul li a {
+      position: relative;
+      text-decoration: none;
+      color: black; }
+      nav .nav-links ul li a:after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 3px;
+        background-color: var(--grey);
+        left: 50%;
+        bottom: -5px;
+        transform: translateX(-50%) scaleX(0);
+        transform-origin: 50% 50%;
+        transition: all 0.5s ease;
+        transition-delay: 0.1s; }
+      nav .nav-links ul li a:hover:after {
+        transform: translateX(-50%) scaleX(1);
+        transition: all 0.5s ease; }
+  nav h4 {
+    display: flex;
+    justify-content: space-evenly; }
+  nav .login ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly; }
+    nav .login ul li {
+      padding: 5px; }
+      nav .login ul li a {
+        text-decoration: none;
+        color: black; }
+    nav .login ul :nth-child(2) {
+      border: 2px solid var(--blue);
+      background: var(--blue);
+      border-radius: 5px; }
+      nav .login ul :nth-child(2) a {
+        color: white; }
+        nav .login ul :nth-child(2) a:after {
+          background-color: white; }
+
+@media screen and (max-width: 600px) {
+  nav {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2em 2em 2em; }
+    nav .nav-links ul li {
+      margin-right: 5px; }
+    nav .login ul li {
+      margin-right: 5px; } }
+
+.headlines {
+  margin: 5em auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 40em; }
+  .headlines p {
+    text-align: center; }
+  .headlines .tagline p {
+    font-family: 'Lato-Bold';
+    margin-bottom: 1em; }
+  .headlines .tag-title {
+    margin-bottom: 1em; }
+    .headlines .tag-title p {
+      font-family: 'Lato-Bold';
+      font-size: 60px; }
+  .headlines .tag-subtitle {
+    margin-bottom: 1em; }
+  .headlines .tag-link {
+    margin-bottom: 1em; }
+    .headlines .tag-link a {
+      text-decoration: none;
+      color: deepskyblue; }
+  .headlines .tag-section {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center; }
+    .headlines .tag-section .tag-group {
+      display: flex;
+      flex-direction: column;
+      width: 50%; }
+      .headlines .tag-section .tag-group i {
+        text-align: center;
+        color: var(--grey); }
+      .headlines .tag-section .tag-group .desc {
+        text-decoration: none;
+        font-family: 'Lato-Light'; }
+
+.tiles-container {
+  margin-top: 5em;
+  padding: 2em; }
+  .tiles-container .title {
+    margin-bottom: 1em; }
+    .tiles-container .title p {
+      font-family: 'Lato-Bold';
+      font-size: 40px;
+      text-align: center; }
+  .tiles-container .grid-container {
+    min-width: 50%; }
+    .tiles-container .grid-container .item {
+      display: flex;
+      flex-direction: column;
+      border: 0.1em solid lightgray;
+      border-radius: 1em;
+      padding: 1em;
+      width: 250px;
+      transition: all 0.2s ease; }
+      .tiles-container .grid-container .item .item-title {
+        font-family: 'Lato-Bold';
+        margin-bottom: 1em; }
+      .tiles-container .grid-container .item .item-desc {
+        font-family: 'Lato-Light'; }
+      .tiles-container .grid-container .item:hover {
+        transform: scale(1.05);
+        transition: all 0.2s ease;
+        box-shadow: 0 0 10px 1px lightgray; }
+
+#active {
+  color: var(--blue); }
+  #active:after {
+    transform: translateX(-50%) scaleX(1);
+    background-color: var(--blue); }
+  #active:hover:after {
+    background-color: var(--grey); }
