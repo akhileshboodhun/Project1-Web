@@ -107,6 +107,18 @@ nav {
         nav .login ul :nth-child(2) a:after {
           background-color: white; }
 
+@media screen and (max-width: 1600px) and (min-width: 1001px) {
+  nav {
+    grid-template-columns: 2fr 4fr 1fr; } }
+
+@media screen and (max-width: 1000px) and (min-width: 851px) {
+  nav {
+    grid-template-columns: 4fr 4fr 4fr; } }
+
+@media screen and (max-width: 850px) and (min-width: 601px) {
+  nav {
+    grid-template-columns: 6fr 4fr 4fr; } }
+
 @media screen and (max-width: 600px) {
   nav {
     grid-template-columns: 1fr;
