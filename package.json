@@ -7,13 +7,15 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "sass": "node-sass -w sass -o css",
         "server": "live-server",
-        "start": "concurrently \"npm run sass\" \"npm run server\" "
+        "tsc-compiler": "tsc -w",
+        "start": "concurrently \"npm run sass\" \"npm run server\" \"npm run tsc-compiler\""
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
         "concurrently": "^6.3.0",
         "live-server": "^1.2.1",
-        "node-sass": "^6.0.1"
+        "node-sass": "^6.0.1",
+        "typescript": "^4.4.4"
     }
 }
