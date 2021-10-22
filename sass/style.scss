@@ -1,5 +1,6 @@
 @import 'fonts.scss';
 @import '../fontawesome6web/css/all.css';
+@import '../fontawesome6web/css';
 * {
     padding: 0;
     border: 0;
@@ -139,6 +140,9 @@ nav {
     nav {
         grid-template-columns: 1fr;
         grid-template-rows: 2em 2em 2em;
+        ul {
+            display: inline-block;
+        }
         .nav-links ul {
             // justify-content: center;
             li {
