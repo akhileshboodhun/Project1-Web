@@ -56,10 +56,11 @@
                     <h4>Riv du Rempart</h4>
                     <h4>1999-04-26</h4>
                     <h4>Developer</h4>
-                    <button class="btn" onclick="AssignEquipments(this)">Manage Equipments</button>
+                    <button class="btn assign-equipments" onclick="AssignEquipments(this)">Manage Equipments</button>
                 </div>
             </div>
         </div>
+
         <div class="modal" id="modal1">
             <div class="container">
                 <form method="POST" action="auth.html" class="form">
@@ -112,37 +113,40 @@
                 </form>
             </div>
         </div>
-    </div>
-    <div class="modal" id="modalEquipments">
-        <div class="container">
-            <br>
-            <form action="auth.html" class="form">
-                <h4>EMPLOYEE DETAILS</h4>
-                <div class="form-group">
-                    <label for="EmployeeId">EmployeeId</label>
-                    <div class="form-input">
-                        <input type="text" for="EmployeeId" name="EmployeeId" placeholder="Enter EmployeeId" />
-                    </div>
-                </div>
 
-                <div class="form-group">
-                    <label for="Equipment">Equipment</label>
-                    <div class="form-input">
-                        <select id="Equipment" name="Equipment">
-                            <option value="">Select Equipment</option>
-                            <option value="Headset">Headset</option>
-                            <option value="Mouse">Mouse</option>
-                            <option value="Keyboard">Keyboard</option>
-                          </select>
+        <div class="modal" id="modalEquipments">
+            <div class="container">
+                <br>
+                <form action="auth.html" class="form">
+                    <h4>EMPLOYEE DETAILS</h4>
+                    <div class="form-group">
+                        <label for="EmployeeId">EmployeeId</label>
+                        <div class="form-input">
+                            <input type="text" for="EmployeeId" name="EmployeeId" placeholder="Enter EmployeeId" id="EmployeeId" disabled="disabled" />
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div></div>
-                    <button type="submit" onclick="">Assign</button>
-                </div>
-            </form>
+
+                    <div class="form-group">
+                        <label for="Equipment">Equipment</label>
+                        <div class="form-input">
+                            <select id="Equipment" name="Equipment">
+                                <option value="">Select Equipment</option>
+                                <option value="Headset">Headset</option>
+                                <option value="Mouse">Mouse</option>
+                                <option value="Keyboard">Keyboard</option>
+                              </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div></div>
+                        <button type="submit" onclick="">Assign</button>
+                    </div>
+                </form>
+            </div>
         </div>
+
     </div>
+
 
 </body>
 <script src="js/assign.js"></script>

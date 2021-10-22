@@ -11,6 +11,11 @@ function AddEmployee(obj) {
     Modal(obj);
 }
 function AssignEquipments(obj) {
+    var parent = obj.parentNode;
+    var emp_field = parent.childNodes[1];
+    var emp_id = emp_field.firstChild.textContent;
+    var empIdInput = document.getElementById('EmployeeId');
+    empIdInput.value = emp_id;
     Modal(obj);
 }
 function Modal(obj) {
@@ -30,13 +35,13 @@ function Modal(obj) {
     console.log(form);
     window.onkeyup = function (event) {
         if (event.key == "Escape") {
-            curr_modal.style.display = "none";
+            modal.style.display = "none";
             form.reset();
         }
     };
     window.onclick = function (event) {
-        if ((event.target == curr_modal) || event.target == container) {
-            curr_modal.style.display = "none";
+        if ((event.target == modal) || event.target == container) {
+            modal.style.display = "none";
             form.reset();
         }
     };

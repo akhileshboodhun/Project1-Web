@@ -81,7 +81,7 @@ var equipmentEmployeeList : Array<EquipmentEmployee> =[
      <h4>${emp.Address}</h4>
      <h4>${emp.DateOfBirth}</h4>
      <h4>${emp.Role}</h4>
-     <button class="btn" onclick="AssignEquipments(this)" modal="modalEquipments">Manage Equipments</button>
+     <button class="btn assign-equipments" onclick="AssignEquipments(this)" modal="modalEquipments">Manage Equipments</button>
  </div>`;
      displayDetails.innerHTML += text;
  });
